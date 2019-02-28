@@ -108,3 +108,57 @@ function showButton_box () {
 //     options.content = '这是一个错误';
 //     label.innerText = dialog.showErrorBox(options);
 // }
+
+/**使用html5的api打开 其他的页面*/
+function openChild () {
+    win = window.open('./childPage.html', '新窗口', 'width=300,height=200');
+}
+
+function onclick_onfocus () {
+    if (win != undefined) {
+        win.focus();
+    }
+}
+
+function close_child () {
+    if (win != undefined) {
+        if (win.closed) {
+            alert('窗口已关闭');
+            return;
+        } else {
+            win.close();
+        }
+    }
+}
+function openForign () {
+    win = window.open('https://www.baidu.com');
+}
+
+function openPrinter () {
+    if (win != undefined) {
+        win.print();
+    }
+}
+
+/**子窗口进行交互 
+ * 传递数据/消息
+*/
+function postMessages () {
+    win.postMessage('this is post messages');
+}
+
+var win;
+function openMessageBox () {
+    win = window.open('./childPostMess.html', '接受消息', 'width=300, height=200');
+}
+
+function onLoad () {
+    window.addEventListener('message', function (e) {
+        console.log('e', e);
+        let l = document.querySelector('#postLabel');
+        l.innerText = e.data;
+    })
+}
+
+/**webview 标签可以在web页面中插入另一个页面， 加上参数 nodeintegration 可以 调用nodejs api*/
+webview.loadURL('xxx') //重新装载页面

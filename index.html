@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>electron</title>
 </head>
+<webview id="geekori" src="https://geekori.com" style="width:400px;height:300px;"></webview>
 <body>
     <h1>electron project</h1>
     <hr>
@@ -26,7 +27,20 @@
     <button onclick="showButton_box()">按钮警告框</button>
     <br>
     <!-- <button onclick="show_error()">showError</button> -->
+    <button onclick="openChild()">打开子页面</button>
+    <br>
+    <button onclick="openForign()">打开外链</button>
+    <br>
+    <button onclick="onclick_onfocus()">聚焦</button>
+    <br>
+    <button onclick="close_child()">关闭子窗口</button>
+    <br>
+    <button onclick="openPrinter()">打开打印机</button>
+    <br>
+    <button onclick="onclick_message()">发送子窗口信息</button>
+    <button onclick="openWindow()">打开子窗口</button>
     <label for="" id="label" style="font-szie: large;"></label>
 </body>
 <script src="./event.js" type="text/javascript"></script>
+<script src="./childBox/event.js" type="text/javascript"></script>
 </html>
