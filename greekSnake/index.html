@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>贪吃蛇小游戏</title>
+</head>
+<script src="./events.js"></script>
+<style>
+    .blank {
+        display: flex;
+        justify-content: center;
+    }
+    .score {
+        margin-right: 10vw;
+    }
+    .button {
+        display: flex;
+    }
+    .button button {
+        border-radius: 5px;
+        min-width: 40px;
+        height: 20px;
+        outline: none;
+    }
+    #resume {
+        margin-right: 5px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="blank">
+            <div class="score">
+                分数：<span id="score"></span>
+            </div>
+            <div class="button">
+                <button id="resume" >恢复</button>
+                <button id="restart" >重新开始</button>
+            </div>
+        </div>
+        <!-- 绘制地图 -->
+        <canvas></canvas>
+    </div>
+</body>
+</html>

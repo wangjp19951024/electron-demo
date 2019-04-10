@@ -162,3 +162,7 @@ function onLoad () {
 
 /**webview 标签可以在web页面中插入另一个页面， 加上参数 nodeintegration 可以 调用nodejs api*/
 webview.loadURL('xxx') //重新装载页面
+
+function saveClick () {
+    
+}

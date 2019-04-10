@@ -2,7 +2,7 @@
   "name": "ele",
   "version": "1.0.0",
   "description": "it is a electron project",
-  "main": "main.js",
+  "main": "build/release/first.node",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,6 +20,14 @@
   },
   "homepage": "https://github.com/wangjp19951024/electron-demo#readme",
   "dependencies": {
-    "electron": "^4.0.5"
+    "bluebird": "^3.5.4",
+    "electron": "^4.0.5",
+    "electron-rebuild": "^1.8.4",
+    "fs": "0.0.1-security",
+    "mysql": "^2.16.0",
+    "sqlite3": "^4.0.6"
+  },
+  "devDependencies": {
+    "electron-packager": "^13.1.1"
   }
 }
